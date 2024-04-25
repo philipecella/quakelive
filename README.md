@@ -6,7 +6,7 @@ Eu criei um script para facilitar a vida na criação do servidor.
 **Como começar?**
 
 Digite no seu servidor linux:
-`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
+wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh
 
 Ele vai baixar o arquivo **[instalar_servidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh")**
 Rode o comando:`chmod +x instalar_servidor.sh `
