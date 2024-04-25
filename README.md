@@ -3,7 +3,12 @@
 
 Eu criei um script para facilitar a vida na criação do servidor.
 
-Baixe o arquivo **[instalar_servidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh)**
+**Como começar?**
+
+Digite no seu servidor linux:
+`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
+
+Ele vai baixar o arquivo **[instalar_servidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh")**
 Rode o comando:`chmod +x instalar_servidor.sh `
 para dar permissão de execução no script.
 
@@ -19,6 +24,10 @@ O que o script vai fazer?
 - Cria config do clan arena
 - cria o executavel do clan arena
 
+Como começar?
+
+Digite no seu servidor linux:
+`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
 Após tudo estar funcionando bonitinho, você precisa alterar algumas informações, como o 
 `zmq_stats_password "SuaSenha1"`
 
