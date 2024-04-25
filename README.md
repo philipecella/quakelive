@@ -3,7 +3,7 @@
 
 Eu criei um script para facilitar a vida na criação do servidor.
 
-Baixe o arquivo **[instalar_servidor.sh](http://https://github.com/philipecella/quakelive/blob/main/instalar_servidor.sh "instalar_servidor.sh")**
+Baixe o arquivo **[instalar_servidor.sh]([http://https://github.com/philipecella/quakelive/blob/main/instalar_servidor.sh "instalar_servidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh)")**
 Rode o comando:`chmod +x instalar_servidor.sh `
 para dar permissão de execução no script.
 
