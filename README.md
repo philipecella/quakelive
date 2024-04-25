@@ -27,11 +27,8 @@ O que o script vai fazer?
 - Cria config do clan arena
 - cria o executavel do clan arena
 
-Como começar?
-
-Digite no seu servidor linux:
-`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
 Após tudo estar funcionando bonitinho, você precisa alterar algumas informações, como o 
+
 `zmq_stats_password "SuaSenha1"`
 
 pois essa senha será usada para contabilizar o ELO no site:
