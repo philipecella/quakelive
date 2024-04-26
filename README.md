@@ -60,3 +60,32 @@ Copie os numeros do campo `steamID64 (Dec):`
 ![image](https://github.com/philipecella/quakelive/assets/79929640/926514dc-72ef-4544-9269-45abbd6c915c)
 
 digite `!myperm` no servidor para verificar se você é o **Owner**
+
+
+
+Os comandos para você gerenciar seu servidor são:
+**screen -ls** (ele exibe a lista de janelas rodando em background)
+![image](https://github.com/philipecella/quakelive/assets/79929640/4b7dc365-09e0-45c1-8393-63d24c9ab3c5)
+
+
+Note que ele está com status de: (Detached)
+
+Para acessar ela, digite:
+**screen -r clanarena**
+![image](https://github.com/philipecella/quakelive/assets/79929640/99e33042-53c6-45b7-866a-17b1e7bbafbd)
+
+Agora ela está como (Attached)
+
+dai é só navegar na pasta cd /home/steam/
+lá você vai encontrar o arquivo chamado **ca.sh**
+digite:
+**./ca.sh**
+
+e seu servidor vai rodar
+
+para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguido de A D
+**CTRL A D**
+que ele volta para a tela anterior como (Detached)
+
+
+
