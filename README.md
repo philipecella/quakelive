@@ -10,7 +10,7 @@ Eu criei um script para facilitar a vida na criação do servidor.
 
 Digite no seu servidor linux:
 
-`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
+`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh`
 
 Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh")**
 
