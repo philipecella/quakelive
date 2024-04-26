@@ -157,7 +157,7 @@ acesse o diretório: cd /home/steam\n\
 e execute o arquivo ./ca.sh\n\
 para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
-screen -r qlclanarena${NC}\n\n\
+screen -r clanarena${NC}\n\n\
 ${YELLOW}Só jogar agora!${NC}"
 
 su - steam <<EOF
