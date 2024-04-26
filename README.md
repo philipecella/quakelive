@@ -91,7 +91,7 @@ e seu servidor vai rodar
 
 para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguido de A D
 
-`**CTRL A D**`
+`CTRL A D`
 
 que ele volta para a tela anterior como (Detached)
 
