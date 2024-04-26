@@ -72,6 +72,7 @@ Note que ele está com status de: (Detached)
 
 Para acessar ela, digite:
 **screen -r clanarena**
+
 ![image](https://github.com/philipecella/quakelive/assets/79929640/99e33042-53c6-45b7-866a-17b1e7bbafbd)
 
 Agora ela está como (Attached)
