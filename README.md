@@ -1,8 +1,7 @@
 
 # Tutorial básico para criar  seu server de quakelive
 
-**IMPORTANTE: VOCÊ DEVE LIBERAR AS PORTAS DO SERVIDOR NO FIREWALL DE ONDE VOCÊ FOR RODAR, 
-PORTAS UDP/TCP, A PORTA 27960 É PADRÃO QUE VAMOS USAR AQUI.**
+**IMPORTANTE: VOCÊ DEVE LIBERAR A INTERNET DO SERVIDOR POIS ELE VAI FAZER DOWNLOAD, ATUALIZAÇAO, ETC E AS PORTAS DO SERVIDOR QUE FOR UTILIZAR (27960 UDP/TCP)**
 
 Eu criei um script para facilitar a vida na criação do servidor.
 
@@ -14,7 +13,8 @@ Digite no seu servidor linux:
 
 Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh)**
 
-Rode o comando:`sudo chmod +x instalarservidor.sh`
+Rode o comando:
+`sudo chmod +x instalarservidor.sh`
 para dar permissão de execução no script.
 
 Depois execute o comando:
