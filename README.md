@@ -44,4 +44,11 @@ Adiciona o ip, a porta e a senha do arquivo.
 e por último, você deve alterar a linha
 `qlx_owner "sua_steam_id"`
 com seu steamID para você ter permissão total no servidor
+Caso você não saiba qual é sua steamid, use o site:
+https://www.steamidfinder.com/
+coloque seu link de steam, nick e ele vai trazer seu steamID:
+Copie os numeros do campo `steamID64 (Dec):`
+
+![image](https://github.com/philipecella/quakelive/assets/79929640/926514dc-72ef-4544-9269-45abbd6c915c)
+
 digite `!myperm` no servidor para verificar se você é o **Owner**
