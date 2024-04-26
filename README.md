@@ -51,8 +51,8 @@ e por último, você deve alterar a linha
 com seu steamID para você ter permissão total no servidor
 Caso você não saiba qual é sua steamid, use o site:
 https://www.steamidfinder.com/
-coloque seu link de steam, nick e ele vai trazer seu steamID:
-Copie os numeros do campo `steamID64 (Dec):`
+coloque seu link da sua steam ou url personalizada e ele vai trazer seu steamID:
+Copie os numeros do campo `steamID64 (Dec):` que ele vai fornecer e coloque no arquivo ca.sh
 
 
 
