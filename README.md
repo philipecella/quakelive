@@ -33,6 +33,11 @@ Após tudo estar funcionando bonitinho, você precisa alterar algumas informaç�
 
 pois essa senha será usada para contabilizar o ELO no site:
 https://qlstats.net/panel1/servers.html
+Clique no botão Add Server e em seguida preencha com os dados que você setou em ca.sh (localizados em /home/steam/ca.sh)
+
+![image](https://github.com/philipecella/quakelive/assets/79929640/01972792-3006-461c-90aa-766472b01c50)
+
+
 
 Adiciona o ip, a porta e a senha do arquivo.
 
