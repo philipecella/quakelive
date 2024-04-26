@@ -14,7 +14,7 @@ Digite no seu servidor linux:
 
 Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh)**
 
-Rode o comando:`sudo chmod +x instalarservidor.sh `
+Rode o comando:`sudo chmod +x instalarservidor.sh`
 para dar permissão de execução no script.
 
 Depois execute o comando:
