@@ -12,13 +12,13 @@ Digite no seu servidor linux:
 
 `wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh`
 
-Ele vai baixar o arquivo **[instalar_servidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalar_servidor.sh")**
+Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh")**
 
-Rode o comando:`chmod +x instalar_servidor.sh `
+Rode o comando:`chmod +x instalarservidor.sh `
 para dar permissão de execução no script.
 
 Depois execute o comando:
-`sudo ./instalar_servidor.sh`
+`sudo ./instalarservidor.sh`
 
 O que o script vai fazer?
 
