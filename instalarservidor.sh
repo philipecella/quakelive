@@ -148,7 +148,7 @@ cp /tmp/quakelive/{clan.cfg,workshop.txt,mappool_ca.txt} /home/steam/steamcmd/st
 cp /tmp/quakelive/ca.sh /home/steam/
 
 ## Facilitando a vida do peao para setar o nome do servidor e senha do qlstats
-# Função para imprimir texto verde
+
 print_green() {
     echo -e "\033[0;32m$1\033[0m"
 }
@@ -166,17 +166,19 @@ read stats_password
 print_green "Digite sua Steam ID: "
 read steam_id
 
+# Substitui as partes relevantes do script com as informações inseridas pelo usuário
 modified_content=$(echo "$script_content" \
-    | sed -e "s/+set sv_hostname .*/+set sv_hostname \"$server_name\"/" \
-          -e "s/+set zmq_rcon_password .*/+set zmq_rcon_password \"$rcon_password\"/" \
-          -e "s/+set zmq_stats_password .*/+set zmq_stats_password \"$stats_password\"/" \
-          -e "s/+set qlx_owner .*/+set qlx_owner \"$steam_id\"/")
+    | sed -e "s/+set sv_hostname .*/+set sv_hostname \"$server_name\" \\\/" \
+          -e "s/+set zmq_rcon_password .*/+set zmq_rcon_password \"$rcon_password\" \\\/" \
+          -e "s/+set zmq_stats_password .*/+set zmq_stats_password \"$stats_password\" \\\/" \
+          -e "s/+set qlx_owner .*/+set qlx_owner \"$steam_id\" \\\/")
 
+# Salva o script modificado no mesmo arquivo ca.sh
 echo "$modified_content" > /home/steam/ca.sh
 
 # Torna o script ca.sh executável
-
 chmod +x /home/steam/ca.sh
+
 chown steam /home/steam/ca.sh
 chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop.txt,mappool_ca.txt}
 
