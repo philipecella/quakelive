@@ -12,12 +12,16 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# Cria o usuário steam sem pedir senha
+# Solicita que o usuário insira a senha para o usuário steam
+echo -e "${YELLOW}Digite a senha para o usuário steam:${NC}"
+read -s steam_password
+
+# Cria o usuário steam com a senha fornecida
 useradd -m -s /bin/bash steam
-echo "steam:steam" | chpasswd
+echo "steam:$steam_password" | chpasswd
 echo -e "${GREEN}Usuário steam criado com sucesso.${NC}"
 
-echo -e "${YELLOW}A senha do seu usuario steam é steam${NC}"
+echo -e "${YELLOW}A senha do seu usuario steam foi definida.${NC}"
 sleep $timeout
 
 # Instalação do Screen
