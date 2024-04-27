@@ -54,7 +54,7 @@ fi
 
 # Atualiza os pacotes do sistema
 echo -e "${YELLOW}Atualizando os pacotes do sistema...${NC}"
-apt-get update
+apt-get update -y
 
 # Instala o Python 3 e suas dependências
 echo -e "${YELLOW}Instalando Python 3 e suas dependências...${NC}"
