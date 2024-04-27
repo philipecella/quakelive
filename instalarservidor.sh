@@ -142,6 +142,36 @@ git clone https://github.com/philipecella/quakelive.git /tmp/quakelive/
 cp /tmp/quakelive/{clan.cfg,workshop.txt,mappool_ca.txt} /home/steam/steamcmd/steamapps/common/qlds/baseq3/
 
 cp /tmp/quakelive/ca.sh /home/steam/
+
+## Facilitando a vida do peao para setar o nome do servidor e senha do qlstats
+# Função para imprimir texto verde
+print_green() {
+    echo -e "\033[0;32m$1\033[0m"
+}
+
+# Lê o conteúdo do arquivo ca.sh
+script_content=$(cat /home/steam/ca.sh)
+
+# Solicita ao usuário as informações necessárias
+print_green "Digite o nome do servidor: "
+read server_name
+print_green "Digite a senha de rcon: "
+read rcon_password
+print_green "Digite a senha do qlstats: "
+read stats_password
+print_green "Digite sua Steam ID: "
+read steam_id
+
+modified_content=$(echo "$script_content" \
+    | sed -e "s/+set sv_hostname .*/+set sv_hostname \"$server_name\"/" \
+          -e "s/+set zmq_rcon_password .*/+set zmq_rcon_password \"$rcon_password\"/" \
+          -e "s/+set zmq_stats_password .*/+set zmq_stats_password \"$stats_password\"/" \
+          -e "s/+set qlx_owner .*/+set qlx_owner \"$steam_id\"/")
+
+echo "$modified_content" > /home/steam/ca.sh
+
+# Torna o script ca.sh executável
+
 chmod +x /home/steam/ca.sh
 chown steam /home/steam/ca.sh
 chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop.txt,mappool_ca.txt}
@@ -162,6 +192,6 @@ ${YELLOW}Só jogar agora!${NC}"
 
 su - steam <<EOF
 cd /home/steam
-screen -dmS clanarena
+screen -dmS clanarena ./ca.sh
 EOF
-su - steam
+# su - steam
