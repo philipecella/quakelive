@@ -213,9 +213,9 @@ Ele vai continuar executando o servidor em background, para acessá-lo, digite n
 screen -r clanarena${NC}\n\n\"
 
 echo " ___  ___  ___  ___  ___  ___  _ _  ___  ___ "
-echo "/ __>|_ _|  __>/ __>| __>| . \| | |  __>| . \\"
-echo "\__ \ | | | _> \__ \| _> |   /| ' |  _> |   /"
-echo "<___/ |_| |_|  <___/|___>|_\_\|__/ |___>|_\\"
+echo "/ __>|_ _|  __>/ __>| __>| . \| | \| __>| . \\"
+echo "\__ \ | | | _> \__ \| _> |   /| ' \| _> |   /"
+echo "<___/ |_| |_|  <___/|___>|_\_\|__/|___>|_\_\\"
 
 su - steam <<EOF
 cd /home/steam
