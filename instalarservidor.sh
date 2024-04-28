@@ -93,12 +93,12 @@ echo -e "${GREEN}Redis, Git e build essentials instalados com sucesso.${NC}"
 sleep $timeout
 
 # Clone o repositório do minqlx
-echo -e "${RED}Clonando o repositório do minqlx...${NC}"
+echo -e "${YELLOW}Clonando o repositório do minqlx...${NC}"
 git clone https://github.com/MinoMino/minqlx.git /tmp/minqlx/
 cd /tmp/minqlx/
 
 # Compila o minqlx
-echo -e "${RED}Compilando o minqlx...${NC}"
+echo -e "${YELLOW}Compilando o minqlx...${NC}"
 make
 
 echo -e "${GREEN}Minqlx compilado com sucesso.${NC}"
@@ -216,13 +216,13 @@ CTRL A D\n\
 tudo junto\n\
 Ele vai continuar executando o servidor em background.\n\
 Para acessá-lo novamente, digite:\n\
-screen -r clanarena${NC}\n\"
+screen -r clanarena${NC}"
 
 sleep $timeout
 
 su - steam <<EOF
 cd /home/steam
 screen -dmS clanarena
-screen -S clanarena -X stuff 'bash /home/steam/ca.sh'
+screen -S clanarena -X stuff 'bash /home/steam/ca.sh^M'
 EOF
 su - steam
