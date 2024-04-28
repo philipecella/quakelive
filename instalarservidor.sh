@@ -202,7 +202,7 @@ chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop
 # limpando sujeiras
 sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
-echo -e "${GREEN}Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/${NC} \n\"
+echo -e "${GREEN}Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/${NC}"
 sleep $timeout
 
 # echo -e "${YELLOW}Iniciando servidor...${NC}"
