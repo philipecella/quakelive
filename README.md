@@ -103,7 +103,7 @@ para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguid
 que ele volta para a tela anterior como (Detached)
 
 
-OBS:
+# Instruções básicas:
 Caso você precise alterar as informações, como steamid, senha do qlstats,
 você pode usar o comando nano
 
