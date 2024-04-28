@@ -201,10 +201,18 @@ sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
 echo "Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/"
 sleep $timeout
+
+echo -e "${YELLOW}Iniciando servidor...${NC}"
+sleep $timeout
+
+echo -e "${GREEN}SERVIDOR INICIADO${NC}"
+sleep $timeout
+
 echo -e "${GREEN}Digite: screen -r clanarena e voce vera que seu servidor já está rodando\n\
 Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
-screen -r clanarena${NC}\n\n\"
+screen -r clanarena${NC}\n\"
+
 sleep $timeout
 
 su - steam <<EOF
