@@ -45,6 +45,12 @@ apt-get install screen -y
 echo -e "${GREEN}Screen instalado com sucesso.${NC}"
 sleep $timeout
 
+# Diretório do servidor Quake Live
+QLDS_DIR="/home/steam/steamcmd/steamapps/common/qlds"
+
+# Verifica se o diretório existe, caso contrário, cria
+mkdir -p "$QLDS_DIR"
+
 # Instalação do STEAMCMD
 apt-get install lib32z1 lib32stdc++6 -y
 su - steam -c 'mkdir -p ~/steamcmd && cd ~/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
@@ -54,9 +60,11 @@ sleep $timeout
 # Instalação do Quake Live Server
 echo -e "${YELLOW}Instalando Quake Live Server...${NC}"
 su - steam -c '~/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
+su - steam -c '~/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
+
 echo -e "${GREEN}Instalação do Quake Live Server concluída!${NC}"
 sleep $timeout
-###########################
+
 echo -e "${YELLOW}Instalando MINQLX, aguarde!${NC}"
 sleep $timeout
 
@@ -87,6 +95,7 @@ sleep $timeout
 
 # Instala o Redis, Git e as ferramentas de compilação
 echo -e "${YELLOW}Instalando Redis, Git e ferramentas de compilação...${NC}"
+sleep $timeout
 apt-get -y install redis-server git build-essential
 
 echo -e "${GREEN}Redis, Git e build essentials instalados com sucesso.${NC}"
@@ -103,12 +112,6 @@ make
 
 echo -e "${GREEN}Minqlx compilado com sucesso.${NC}"
 sleep $timeout
-
-# Diretório do servidor Quake Live
-QLDS_DIR="/home/steam/steamcmd/steamapps/common/qlds"
-
-# Verifica se o diretório existe, caso contrário, cria
-mkdir -p "$QLDS_DIR"
 
 # Copia os arquivos do minqlx para o diretório do servidor Quake Live
 cp -r /tmp/minqlx/bin/* "$QLDS_DIR"
@@ -137,9 +140,9 @@ echo -e "${GREEN}Instalação e configuração do MinoMino/minqlx concluídas!${
 sleep $timeout
 ###########################
 
-echo -e "${RED}Baixando a config e executavel do clan arena${NC}"
-
-echo -e "${RED}Baixando os plugins que eu uso no meu server agora${NC}"
+echo -e "${YELLOW}Baixando a config e executavel do clan arena${NC}"
+echo -e "${YELLOW}Baixando os plugins que eu uso no meu server agora${NC}"
+sleep $timeout
 
 # Clona o repositório
 git clone https://github.com/philipecella/minqlx-plugins.git /tmp/minqlx-plugins
@@ -147,17 +150,15 @@ git clone https://github.com/philipecella/minqlx-plugins.git /tmp/minqlx-plugins
 # Copia os arquivos .py para o destino desejado e substitui os existentes
 cp -r /tmp/minqlx-plugins/*.py /home/steam/steamcmd/steamapps/common/qlds/minqlx-plugins
 
-echo "Arquivos copiados com sucesso para /home/steam/steamcmd/steamapps/common/qlds/minqlx-plugins."
-
+echo -e "${GREEN}Arquivos copiados com sucesso para /home/steam/steamcmd/steamapps/common/qlds/minqlx-plugins/${NC}"
+sleep $timeout
 
 # Clona o repositório
 mkdir /tmp/
 git clone https://github.com/philipecella/quakelive.git /tmp/quakelive/
 
 # Copia o arquivo clan.cfg para o diretório desejado
-
 cp /tmp/quakelive/{clan.cfg,workshop.txt,mappool_ca.txt} /home/steam/steamcmd/steamapps/common/qlds/baseq3/
-
 cp /tmp/quakelive/ca.sh /home/steam/
 
 ## Facilitando a vida do peao para setar o nome do servidor e senha do qlstats
@@ -191,7 +192,6 @@ echo "$modified_content" > /home/steam/ca.sh
 
 # Torna o script ca.sh executável
 chmod +x /home/steam/ca.sh
-
 chown steam /home/steam/ca.sh
 chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop.txt,mappool_ca.txt}
 
@@ -199,28 +199,47 @@ chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop
 # limpando sujeiras
 sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
-echo "Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/"
+tput clear
+
+echo -e "${GREEN}Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/${NC}"
 sleep $timeout
 
-echo -e "${YELLOW}Iniciando servidor...${NC}"
-sleep $timeout
+# echo -e "${YELLOW}Iniciando servidor...${NC}"
+# sleep $timeout
+
+print_message() {
+    local message="$1"
+    for ((i = 1; i <= 4; i++)); do
+        printf "${YELLOW}${message}${NC}"
+        for ((j = 1; j <= i; j++)); do
+            printf "."
+        done
+        printf "\n"
+        sleep 1
+    done
+}
+
+print_message "Iniciando servidor"
 
 echo -e "${GREEN}SERVIDOR INICIADO${NC}"
 sleep $timeout
 
-echo -e "${GREEN}Digite:${NC}
-
-${YELLOW}screen -r clanarena${NC}
-
-${GREEN}e voce vera que seu servidor já está rodando
-Para sair desse console e retornar ao terminal linux sem fechar o servidor, pressione
-
-CTRL A D
-
-tudo junto
-Ele vai continuar executando o servidor em background.
-Para acessá-lo novamente, digite:
-screen -r clanarena${NC}"
+echo -e "\n\
+${GREEN}#################################################
+${GREEN}## Digite: ${YELLOW}screen -r clanarena
+${GREEN}##
+${GREEN}## e você verá que seu servidor já está rodando.
+## Para sair desse console e retornar ao terminal
+## Linux sem fechar o servidor,
+## pressione: ${YELLOW}CTRL A D
+${GREEN}##
+##
+## Tudo junto. Ele vai continuar executando
+## o servidor em background
+## Para acessá-lo novamente,
+##
+## Digite: ${YELLOW}screen -r clanarena
+${GREEN}#################################################"
 
 sleep $timeout
 
