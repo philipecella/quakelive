@@ -6,6 +6,25 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 timeout=3
 
+#!/bin/bash
+
+echo "         _____ ___________           "
+echo "        /  ___|_   _|  ___|          "
+echo "        \ \`--.  | | | |_             "
+echo "         \`--. \\ | | |  _|            "
+echo "        /\\__/ / | | | |              "
+echo "        \\____/  \\_/ \\_|              "
+echo "                                     "
+echo "                                     "
+echo " _____ ___________ _   _ ___________ "
+echo "/  ___|  ___| ___ \\ | | |  ___| ___ \\"
+echo "\\ \`--.| |__ | |_/ / | | | |__ | |_/ /"
+echo " \`--. \\  __||    /| | | |  __||    / "
+echo "/\\__/ / |___| |\\ \\ \\_/ / |___| |\\ \\ "
+echo "\\____/\\____/\\_| \\_\\___/\\____/\\_| \\_\\"
+
+sleep $timeout
+
 # Verifica se o script está sendo executado com permissões de root
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}Este script precisa ser executado com permissões de root${NC}"
@@ -188,16 +207,30 @@ sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
 echo "Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/"
 
-echo -e "${GREEN}para iniciar seu servidor, digite: screen -r clanarena\n\
-acesse o diretório: cd /home/steam\n\
-e execute o arquivo ./ca.sh\n\
-para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
+echo -e "${GREEN}Digite: screen -r clanarena e voce vera que seu servidor já está rodando\n\
+Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
-screen -r clanarena${NC}\n\n\
-${YELLOW}Só jogar agora!${NC}"
+screen -r clanarena${NC}\n\n\"
+
+echo "         _____ ___________           "
+echo "        /  ___|_   _|  ___|          "
+echo "        \ \`--.  | | | |_             "
+echo "         \`--. \\ | | |  _|            "
+echo "        /\\__/ / | | | |              "
+echo "        \\____/  \\_/ \\_|              "
+echo "                                     "
+echo "                                     "
+echo " _____ ___________ _   _ ___________ "
+echo "/  ___|  ___| ___ \\ | | |  ___| ___ \\"
+echo "\\ \`--.| |__ | |_/ / | | | |__ | |_/ /"
+echo " \`--. \\  __||    /| | | |  __||    / "
+echo "/\\__/ / |___| |\\ \\ \\_/ / |___| |\\ \\ "
+echo "\\____/\\____/\\_| \\_\\___/\\____/\\_| \\_\\"
 
 su - steam <<EOF
 cd /home/steam
-screen -dmS clanarena ./ca.sh
+screen -dmS clanarena
+screen -S clanarena -X stuff "bash /home/steam/ca.sh^M"
 EOF
-# su - steam
+su - steam
+
