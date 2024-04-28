@@ -85,7 +85,7 @@ apt-get -y install python3 python3-dev
 # Verifica se o Python 3.5 ou posterior está instalado
 python_version=$(python3 --version 2>&1 | cut -d' ' -f2)
 required_version="3.5"
-if [ "$(printf '%s\n' "$required_version" "$python_version" | sort -V | head -n1)" -ge "$required_version" ]; then
+if [ "$(printf '%s\n' "$required_version" "$python_version" | sort -V | head -n1)" != "$required_version" ]; then
     echo -e "${RED}Versão do Python insuficiente. Por favor, instale o Python $required_version ou posterior.${NC}"
     exit 1
 fi
@@ -199,9 +199,7 @@ chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop
 # limpando sujeiras
 sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
-tput clear
-
-echo -e "${GREEN}Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/${NC}"
+echo -e "${GREEN}Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/${NC} \n\"
 sleep $timeout
 
 # echo -e "${YELLOW}Iniciando servidor...${NC}"
@@ -225,7 +223,7 @@ echo -e "${GREEN}SERVIDOR INICIADO${NC}"
 sleep $timeout
 
 echo -e "\n\
-${GREEN}#################################################
+${RED}#################################################
 ${GREEN}## Digite: ${YELLOW}screen -r clanarena
 ${GREEN}##
 ${GREEN}## e você verá que seu servidor já está rodando.
@@ -233,13 +231,12 @@ ${GREEN}## e você verá que seu servidor já está rodando.
 ## Linux sem fechar o servidor,
 ## pressione: ${YELLOW}CTRL A D
 ${GREEN}##
-##
 ## Tudo junto. Ele vai continuar executando
 ## o servidor em background
 ## Para acessá-lo novamente,
 ##
 ## Digite: ${YELLOW}screen -r clanarena
-${GREEN}#################################################"
+${RED}#################################################"
 
 sleep $timeout
 
