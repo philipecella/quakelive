@@ -208,9 +208,14 @@ sleep $timeout
 echo -e "${GREEN}SERVIDOR INICIADO${NC}"
 sleep $timeout
 
-echo -e "${GREEN}Digite: screen -r clanarena e voce vera que seu servidor já está rodando\n\
-Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
-Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
+echo -e "${GREEN}Digite:\n\ 
+screen -r clanarena\n\
+e voce vera que seu servidor já está rodando\n\
+Para sair desse console e retornar ao terminal linux sem fechar o servidor, pressione\n\
+CTRL A D\n\
+tudo junto\n\
+Ele vai continuar executando o servidor em background.\n\
+Para acessá-lo novamente, digite:\n\
 screen -r clanarena${NC}\n\"
 
 sleep $timeout
@@ -218,6 +223,6 @@ sleep $timeout
 su - steam <<EOF
 cd /home/steam
 screen -dmS clanarena
-screen -S clanarena -X stuff "bash /home/steam/ca.sh^M"
+screen -S clanarena -X stuff 'bash /home/steam/ca.sh'
 EOF
 su - steam
