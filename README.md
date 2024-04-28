@@ -113,4 +113,13 @@ ou mudar configurações na config do servidor:
 
 **nano /home/steam/steamcmd/steamapps/common/qlds/baseq3/clan.cfg**
 
+e reinicie o servidor após mudar esses dados.
+
+acesse o servidor com: screen -r clanarena
+**digite QUIT**
+e pressione **CTRL C**
+
+ele vai retornar a tela do console do linux, e você executa novamente
+**./ca.sh**
+
 
