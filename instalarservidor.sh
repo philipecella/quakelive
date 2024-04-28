@@ -208,14 +208,18 @@ sleep $timeout
 echo -e "${GREEN}SERVIDOR INICIADO${NC}"
 sleep $timeout
 
-echo -e "${GREEN}Digite:\n\ 
-screen -r clanarena\n\
-e voce vera que seu servidor já está rodando\n\
-Para sair desse console e retornar ao terminal linux sem fechar o servidor, pressione\n\
-CTRL A D\n\
-tudo junto\n\
-Ele vai continuar executando o servidor em background.\n\
-Para acessá-lo novamente, digite:\n\
+echo -e "${GREEN}Digite:${NC}
+
+${YELLOW}screen -r clanarena${NC}
+
+${GREEN}e voce vera que seu servidor já está rodando
+Para sair desse console e retornar ao terminal linux sem fechar o servidor, pressione
+
+CTRL A D
+
+tudo junto
+Ele vai continuar executando o servidor em background.
+Para acessá-lo novamente, digite:
 screen -r clanarena${NC}"
 
 sleep $timeout
