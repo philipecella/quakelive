@@ -31,27 +31,22 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# Solicita que o usuário insira a senha para o usuário steam
 echo -e "${YELLOW}Digite a senha para o usuário steam:${NC}"
 read -s steam_password
 
-# Cria o usuário steam com a senha fornecida
 useradd -m -s /bin/bash steam
 echo "steam:$steam_password" | chpasswd
 echo -e "${GREEN}Usuário steam criado com sucesso.${NC}"
-
-echo -e "${YELLOW}A senha do seu usuario steam foi definida.${NC}"
 sleep $timeout
 
 # Instalação do Screen
 echo -e "${YELLOW}Instalando Screen...${NC}"
 apt-get install screen -y
 echo -e "${GREEN}Screen instalado com sucesso.${NC}"
+sleep $timeout
 
 # Instalação do STEAMCMD
 apt-get install lib32z1 lib32stdc++6 -y
-
-# Cria o diretório e faz o download do SteamCMD
 su - steam -c 'mkdir -p ~/steamcmd && cd ~/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
 echo -e "${GREEN}SteamCMD instalado${NC}"
 sleep $timeout
@@ -60,9 +55,9 @@ sleep $timeout
 echo -e "${YELLOW}Instalando Quake Live Server...${NC}"
 su - steam -c '~/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
 echo -e "${GREEN}Instalação do Quake Live Server concluída!${NC}"
-
+sleep $timeout
 ###########################
-echo -e "${YELLOW}Partindo para instalar MINQLX, aguarde!${NC}"
+echo -e "${YELLOW}Instalando MINQLX, aguarde!${NC}"
 sleep $timeout
 
 # Verifica se o script está sendo executado com permissões de root
@@ -107,7 +102,6 @@ echo -e "${RED}Compilando o minqlx...${NC}"
 make
 
 echo -e "${GREEN}Minqlx compilado com sucesso.${NC}"
-
 sleep $timeout
 
 # Diretório do servidor Quake Live
@@ -119,8 +113,8 @@ mkdir -p "$QLDS_DIR"
 # Copia os arquivos do minqlx para o diretório do servidor Quake Live
 cp -r /tmp/minqlx/bin/* "$QLDS_DIR"
 
-echo -e "${RED}Arquivos do minqlx copiados para o diretório do servidor Quake Live.${NC}"
-
+echo -e "${GREEN}Arquivos do minqlx copiados para o diretório do servidor Quake Live.${NC}"
+sleep $timeout
 # Volta para o diretório do servidor Quake Live
 cd "$QLDS_DIR"
 
@@ -138,9 +132,9 @@ export PIP_BREAK_SYSTEM_PACKAGES=1
 sudo python3 -m pip install -r requirements.txt
 
 echo -e "${GREEN}Plugins minqlx instalados com sucesso.${NC}"
-
+timeout=3
 echo -e "${GREEN}Instalação e configuração do MinoMino/minqlx concluídas!${NC}"
-
+sleep $timeout
 ###########################
 
 echo -e "${RED}Baixando a config e executavel do clan arena${NC}"
@@ -206,16 +200,12 @@ chown steam /home/steam/steamcmd/steamapps/common/qlds/baseq3/{clan.cfg,workshop
 sudo rm -fr /tmp/minqlx-plugins/ /tmp/minqlx/ /tmp/quakelive/
 
 echo "Configs copiadas com sucesso para /home/steam/steamcmd/steamapps/common/qlds/baseq3 e /home/steam/"
-
+sleep $timeout
 echo -e "${GREEN}Digite: screen -r clanarena e voce vera que seu servidor já está rodando\n\
 Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
 screen -r clanarena${NC}\n\n\"
-
-echo " ___  ___  ___  ___  ___  ___  _ _  ___  ___ "
-echo "/ __>|_ _|  __>/ __>| __>| . \| | \| __>| . \\"
-echo "\__ \ | | | _> \__ \| _> |   /| ' \| _> |   /"
-echo "<___/ |_| |_|  <___/|___>|_\_\|__/|___>|_\_\\"
+sleep $timeout
 
 su - steam <<EOF
 cd /home/steam
@@ -223,4 +213,3 @@ screen -dmS clanarena
 screen -S clanarena -X stuff "bash /home/steam/ca.sh^M"
 EOF
 su - steam
-
