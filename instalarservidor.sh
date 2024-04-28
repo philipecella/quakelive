@@ -7,7 +7,6 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 timeout=3
 
-#!/bin/bash
 
 echo "         _____ ___________           "
 echo "        /  ___|_   _|  ___|          "
@@ -213,20 +212,10 @@ Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
 screen -r clanarena${NC}\n\n\"
 
-echo "         _____ ___________           "
-echo "        /  ___|_   _|  ___|          "
-echo "        \ \`--.  | | | |_             "
-echo "         \`--. \\ | | |  _|            "
-echo "        /\\__/ / | | | |              "
-echo "        \\____/  \\_/ \\_|              "
-echo "                                     "
-echo "                                     "
-echo " _____ ___________ _   _ ___________ "
-echo "/  ___|  ___| ___ \\ | | |  ___| ___ \\"
-echo "\\ \`--.| |__ | |_/ / | | | |__ | |_/ /"
-echo " \`--. \\  __||    /| | | |  __||    / "
-echo "/\\__/ / |___| |\\ \\ \\_/ / |___| |\\ \\ "
-echo "\\____/\\____/\\_| \\_\\___/\\____/\\_| \\_\\"
+echo "___  ___  ___  ___  ___  ___  _ _  ___  ___ "
+echo "/ __>|_ _|| __>/ __>| __>| . \| | || __>| . \\"
+echo "\__ \ | | | _> \__ \| _> |   /| ' || _> |   /"
+echo "<___/ |_| |_|  <___/|___>|_\_\|__/ |___>|_\\"
 
 su - steam <<EOF
 cd /home/steam
