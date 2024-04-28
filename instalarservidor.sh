@@ -52,6 +52,9 @@ QLDS_DIR="/home/steam/steamcmd/steamapps/common/qlds"
 mkdir -p "$QLDS_DIR"
 
 # Instalação do STEAMCMD
+mkdir -p /home/steam/steamcmd/
+chown steam -R /home/steam/steamcmd/
+
 apt-get install lib32z1 lib32stdc++6 -y
 su - steam -c 'mkdir -p ~/steamcmd && cd ~/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
 echo -e "${GREEN}SteamCMD instalado${NC}"
