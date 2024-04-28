@@ -10,6 +10,12 @@ Eu criei um script para facilitar a vida na criação do servidor.
 
 Digite no seu servidor linux:
 
+sudo su
+
+para você entrar como root e não ter problemas para instalar os pacotes, etc
+
+depois digite o comando:
+
 `wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh`
 
 Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh)**
@@ -96,5 +102,15 @@ para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguid
 
 que ele volta para a tela anterior como (Detached)
 
+
+OBS:
+Caso você precise alterar as informações, como steamid, senha do qlstats,
+você pode usar o comando nano
+
+**nano /home/steam/ca.sh**
+
+ou mudar configurações na config do servidor:
+
+**nano /home/steam/steamcmd/steamapps/common/qlds/baseq3/clan.cfg**
 
 
