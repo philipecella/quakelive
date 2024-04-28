@@ -212,9 +212,9 @@ Para sair do console sem fechá-lo, pressione CTRL A D tudo junto\n\
 Ele vai continuar executando o servidor em background, para acessá-lo, digite novamente:\n\
 screen -r clanarena${NC}\n\n\"
 
-echo "___  ___  ___  ___  ___  ___  _ _  ___  ___ "
-echo "/ __>|_ _|| __>/ __>| __>| . \| | || __>| . \\"
-echo "\__ \ | | | _> \__ \| _> |   /| ' || _> |   /"
+echo " ___  ___  ___  ___  ___  ___  _ _  ___  ___ "
+echo "/ __>|_ _|  __>/ __>| __>| . \| | |  __>| . \\"
+echo "\__ \ | | | _> \__ \| _> |   /| ' |  _> |   /"
 echo "<___/ |_| |_|  <___/|___>|_\_\|__/ |___>|_\\"
 
 su - steam <<EOF
