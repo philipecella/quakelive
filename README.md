@@ -29,13 +29,13 @@ Depois execute o comando:
 
 O que o script vai fazer?
 
-- Criar usuário chamado steam (com a senha steam depois você **deve** alterar, se quiser)
+- Criar usuário chamado steam
 - Instalar o pacote Screen (que é onde os servers rodam em background)
 - Instala o steamcmd
 - Instala o quakelive server
 - Instala Minqlx e suas dependências
 - Cria config do clan arena
-- cria o executavel do clan arena
+- Cria o executavel do clan arena
 
 Após tudo estar funcionando bonitinho, você precisa alterar algumas informações 
 
