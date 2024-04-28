@@ -6,27 +6,6 @@
 
 Eu criei um script para facilitar a vida na criação do servidor.
 
-**Como começar?**
-
-Digite no seu servidor linux:
-
-sudo su
-
-para você entrar como root e não ter problemas para instalar os pacotes, etc
-
-depois digite o comando:
-
-`wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh`
-
-Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh)**
-
-Rode o comando:
-`sudo chmod +x instalarservidor.sh`
-para dar permissão de execução no script.
-
-Depois execute o comando:
-`sudo ./instalarservidor.sh`
-
 O que o script vai fazer?
 
 - Criar usuário chamado steam
@@ -37,11 +16,52 @@ O que o script vai fazer?
 - Cria config do clan arena
 - Cria o executavel do clan arena
 
-Após tudo estar funcionando bonitinho, você precisa alterar algumas informações 
+**Como começar?**
 
-`zmq_stats_password "SuaSenha1"`
+Digite no seu servidor linux:
 
-pois essa senha será usada para contabilizar o ELO no site:
+    sudo su
+
+para você entrar como root e não ter problemas para instalar os pacotes, etc
+
+- Durante a instalação, ele vai te pedir para setar:
+- Nome do servidor (Hostname), 
+- Senha do Rcon (usado para gerenciar remotamente) e,
+- Senha do QLSTATS (para cadastrar no site qlstats.net)
+- Sua SteamID
+
+
+
+depois digite o comando:
+
+    wget https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh
+
+Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.com/philipecella/quakelive/main/instalarservidor.sh)**
+
+Rode o comando:
+
+        sudo chmod +x instalarservidor.sh
+para dar permissão de execução no script.
+
+Depois execute o comando:
+
+    sudo ./instalarservidor.sh
+
+
+Os dados que o instalador vai te pedir erão salvas em:
+
+    /home/steam/ca.sh
+
+Para edita-las posteriormente, digite
+
+    nano /home/steam/ca.sh
+
+
+------------
+
+# Cadastrar server para contabilizar elo
+
+A senha que você setou durante a instalação e que também se encontra no arquivo ca.sh será usada para contabilizar o ELO no site:
 
 https://qlstats.net/panel1/servers.html
 
@@ -53,9 +73,9 @@ Clique no botão Add Server e em seguida preencha com os dados que você setou e
 
 Adiciona o ip, a porta e a senha do arquivo.
 
-e por último, você deve alterar a linha
-`qlx_owner "sua_steam_id"`
-com seu steamID para você ter permissão total no servidor
+------------
+# Virar OWNER - ache o seu steamID caso não saiba
+
 Caso você não saiba qual é sua steamid, use o site:
 https://www.steamidfinder.com/
 coloque seu link da sua steam ou url personalizada e ele vai trazer seu steamID:
@@ -101,6 +121,9 @@ para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguid
 `CTRL A D`
 
 que ele volta para a tela anterior como (Detached)
+
+
+------------
 
 
 # Instruções básicas:
