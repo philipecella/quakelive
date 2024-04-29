@@ -5,7 +5,7 @@
 **IMPORTANTE: VOCÊ DEVE LIBERAR A INTERNET DO SERVIDOR POIS ELE VAI FAZER DOWNLOAD, ATUALIZAÇAO, ETC E AS PORTAS DO SERVIDOR QUE FOR UTILIZAR (27960 UDP/TCP)**
 
 
-**Vídeo do tutorial abaixo**
+**Vídeo do tutorial abaixo**  (Clique para abrir em uma nova guia)
 [![TUTORIAL](https://github.com/philipecella/quakelive/assets/79929640/432f68c3-262b-447a-92b2-73dd9985cb42 "TUTORIAL")](https://www.youtube.com/watch?v=1X8Tqxc4Qcw "TUTORIAL")
 
 
