@@ -8,6 +8,7 @@ NC='\033[0m' # No Color
 timeout=3
 
 apt-get update -y
+tput clear
 
 echo "         _____ ___________           "
 echo "        /  ___|_   _|  ___|          "
