@@ -48,7 +48,7 @@ Depois execute o comando:
     sudo ./instalarservidor.sh
 
 
-Os dados que o instalador vai te pedir erão salvas em:
+Os dados que o instalador vai te pedir serão salvas em:
 
     /home/steam/ca.sh
 
