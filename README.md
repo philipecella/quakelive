@@ -98,22 +98,13 @@ Os comandos para você gerenciar seu servidor são:
 Note que ele está com status de: (Detached)
 
 Para acessar ela, digite:
-
 **screen -r clanarena**
 
 ![image](https://github.com/philipecella/quakelive/assets/79929640/99e33042-53c6-45b7-866a-17b1e7bbafbd)
 
-Agora ela está como (Attached)
-
-dai é só navegar na pasta **cd /home/steam/**
-
-lá você vai encontrar o arquivo chamado 
-**ca.sh**
 digite:
 
 **./ca.sh**
-
-e seu servidor vai rodar
 
 para voltar a tela anterior e manter seu servidor rodando, pressione CTRL seguido de A D
 
