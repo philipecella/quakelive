@@ -40,7 +40,7 @@ Ele vai baixar o arquivo **[instalarservidor.sh](https://raw.githubusercontent.c
 
 Rode o comando:
 
-        sudo chmod +x instalarservidor.sh
+    sudo chmod +x instalarservidor.sh
 para dar permissão de execução no script.
 
 Depois execute o comando:
