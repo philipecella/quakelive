@@ -65,7 +65,7 @@ sleep $timeout
 
 # Instalação do Quake Live Server
 echo -e "${YELLOW}Instalando Quake Live Server...${NC}"
-su - steam -c '/home/steam/steamcmdsteamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
+su - steam -c '/home/steam/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
 
 echo -e "${GREEN}Instalação do Quake Live Server concluída!${NC}"
 sleep $timeout
