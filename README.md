@@ -7,7 +7,7 @@
 
 **Vídeo do tutorial abaixo**
 
-[![image](https://github.com/philipecella/quakelive/assets/79929640/be0e841b-c736-4d32-a994-5972c22acaa5)](http://https://www.youtube.com/watch?v=1X8Tqxc4Qcw "![image](https://github.com/philipecella/quakelive/assets/79929640/be0e841b-c736-4d32-a994-5972c22acaa5)")
+[![image](https://github.com/philipecella/quakelive/assets/79929640/be0e841b-c736-4d32-a994-5972c22acaa5)](http://https://www.youtube.com/watch?v=1X8Tqxc4Qcw"![image](https://github.com/philipecella/quakelive/assets/79929640/be0e841b-c736-4d32-a994-5972c22acaa5)")
 
 
 Eu criei um script para facilitar a vida na criação do servidor.
