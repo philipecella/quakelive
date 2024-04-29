@@ -58,7 +58,21 @@ Para edita-las posteriormente, digite
 
 
 ------------
+# Virar OWNER - ache o seu steamID caso não saiba
 
+Caso você não saiba qual é sua steamid, use o site:
+https://www.steamidfinder.com/
+coloque seu link da sua steam ou url personalizada e ele vai trazer seu steamID:
+Copie os numeros do campo `steamID64 (Dec):` que ele vai fornecer e coloque no arquivo ca.sh
+
+
+
+
+![image](https://github.com/philipecella/quakelive/assets/79929640/926514dc-72ef-4544-9269-45abbd6c915c)
+
+digite `!myperm` no servidor para verificar se você é o **Owner**
+
+------------
 # Cadastrar server para contabilizar elo
 
 A senha que você setou durante a instalação e que também se encontra no arquivo ca.sh será usada para contabilizar o ELO no site:
@@ -74,21 +88,6 @@ Clique no botão Add Server e em seguida preencha com os dados que você setou e
 Adiciona o ip, a porta e a senha do arquivo.
 
 ------------
-# Virar OWNER - ache o seu steamID caso não saiba
-
-Caso você não saiba qual é sua steamid, use o site:
-https://www.steamidfinder.com/
-coloque seu link da sua steam ou url personalizada e ele vai trazer seu steamID:
-Copie os numeros do campo `steamID64 (Dec):` que ele vai fornecer e coloque no arquivo ca.sh
-
-
-
-
-![image](https://github.com/philipecella/quakelive/assets/79929640/926514dc-72ef-4544-9269-45abbd6c915c)
-
-digite `!myperm` no servidor para verificar se você é o **Owner**
-
-
 
 Os comandos para você gerenciar seu servidor são:
 
