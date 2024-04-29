@@ -7,6 +7,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 timeout=3
 
+apt-get update -y
 
 echo "         _____ ___________           "
 echo "        /  ___|_   _|  ___|          "
@@ -55,6 +56,7 @@ mkdir -p "$QLDS_DIR"
 mkdir -p /home/steam/steamcmd/
 chown steam -R /home/steam/steamcmd/
 
+apt-get update -y
 apt-get install lib32z1 lib32stdc++6 -y
 su - steam -c 'mkdir -p ~/steamcmd && cd ~/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
 echo -e "${GREEN}SteamCMD instalado${NC}"
