@@ -32,7 +32,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-echo -e "${YELLOW}Digite a senha para o usuário steam:${NC}"
+echo -e "\n${YELLOW}Digite a senha para o usuário steam:${NC}"
 read -s steam_password
 
 useradd -m -s /bin/bash steam
@@ -58,14 +58,13 @@ chown steam -R /home/steam/steamcmd/
 
 apt-get update -y
 apt-get install lib32z1 lib32stdc++6 -y
-su - steam -c 'mkdir -p ~/steamcmd && cd ~/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
+su - steam -c 'mkdir -p /home/steam/steamcmd && cd /home/steam/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
 echo -e "${GREEN}SteamCMD instalado${NC}"
 sleep $timeout
 
 # Instalação do Quake Live Server
 echo -e "${YELLOW}Instalando Quake Live Server...${NC}"
-su - steam -c '~/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
-su - steam -c '~/steamcmd/steamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
+su - steam -c '/home/steam/steamcmdsteamcmd.sh +force_install_dir /home/steam/steamcmd/steamapps/common/qlds/ +login anonymous +app_update 349090 +quit'
 
 echo -e "${GREEN}Instalação do Quake Live Server concluída!${NC}"
 sleep $timeout
