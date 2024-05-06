@@ -107,6 +107,8 @@ apt-get -y install redis-server git build-essential
 echo -e "${GREEN}Redis, Git e build essentials instalados com sucesso.${NC}"
 sleep $timeout
 
+unset DEBIAN_FRONTEND
+
 # Clone o repositório do minqlx
 echo -e "${YELLOW}Clonando o repositório do minqlx...${NC}"
 git clone https://github.com/MinoMino/minqlx.git /tmp/minqlx/
@@ -222,7 +224,7 @@ print_message() {
         sleep 1
     done
 }
-unset DEBIAN_FRONTEND
+
 print_message "Iniciando servidor"
 
 echo -e "${GREEN}SERVIDOR INICIADO${NC}"
@@ -249,6 +251,7 @@ sleep $timeout
 su - steam <<EOF
 cd /home/steam
 screen -dmS clanarena
+sleep $timeout
 screen -S clanarena -X stuff 'bash /home/steam/ca.sh^M'
 EOF
 su - steam
