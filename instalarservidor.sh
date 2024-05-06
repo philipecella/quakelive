@@ -222,7 +222,7 @@ print_message() {
         sleep 1
     done
 }
-
+unset DEBIAN_FRONTEND
 print_message "Iniciando servidor"
 
 echo -e "${GREEN}SERVIDOR INICIADO${NC}"
