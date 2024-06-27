@@ -148,12 +148,11 @@ ele vai retornar a tela do console do linux, e você executa novamente
 -----------------
 
 
-# Clona o repositorio
+# Clone o repositorio
 git clone https://github.com/philipecella/quakelive.git
 
 # Acesse a pasta do Docker
 cd docker
-
 
 # Crie sua imagem
 docker build -t qliveserver .
