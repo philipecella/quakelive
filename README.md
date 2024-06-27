@@ -162,10 +162,10 @@ docker run -d --name redis -v ql-redis:/data redis
 
 # Rode o server de quakelive e aguarde
 docker run -d \
-  -e SERVER_NAME="DOCKER" \
-  -e RCON_PASSWORD="rconpw" \
-  -e STATS_PASSWORD="qlstatspw" \
-  -e STEAM_ID="76561198154953404" \
+  -e SERVER_NAME="Digite o Hostname Aqui" \
+  -e RCON_PASSWORD="Defina sua Rcon" \
+  -e STATS_PASSWORD="Defina a senha do qlstats" \
+  -e STEAM_ID="coloque sua steam id" \
   --link redis \
   --name qliveserver \
   -p 27960:27960/udp \
