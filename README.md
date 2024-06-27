@@ -1,6 +1,7 @@
 
 # Tutorial básico para criar  seu server de quakelive
 # Instalado no UBUNTU **22.04**
+# Instruções para subir em um Docker (container) no final do texto.
 
 **IMPORTANTE: VOCÊ DEVE LIBERAR A INTERNET DO SERVIDOR POIS ELE VAI FAZER DOWNLOAD, ATUALIZAÇAO, ETC E AS PORTAS DO SERVIDOR QUE FOR UTILIZAR (27960 UDP/TCP)**
 
@@ -142,5 +143,38 @@ e pressione **CTRL C**
 ele vai retornar a tela do console do linux, e você executa novamente
 
 **./ca.sh**
+
+
+-----------------
+
+
+# Clona o repositorio
+git clone https://github.com/philipecella/quakelive.git
+
+# Acesse a pasta do Docker
+cd docker
+
+
+# Crie sua imagem
+docker build -t qliveserver .
+
+# Execute o redis
+docker run -d --name redis -v ql-redis:/data redis
+
+# Rode o server de quakelive e aguarde
+docker run -d \
+  -e SERVER_NAME="DOCKER" \
+  -e RCON_PASSWORD="rconpw" \
+  -e STATS_PASSWORD="qlstatspw" \
+  -e STEAM_ID="76561198154953404" \
+  --link redis \
+  --name qliveserver \
+  -p 27960:27960/udp \
+  -p 28960:28960/tcp \
+  qliveserver
+
+# Comando par acompanhar o servidor ser criado
+docker logs -f qliveserver
+
 
 
