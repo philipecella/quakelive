@@ -7,7 +7,7 @@ while [ true ]; do
     bash /home/steam/steamcmd/steamapps/common/qlds/run_server_x64_minqlx.sh \
     +set net_strict "1" \
     +set net_port "$gameport" \
-    +set qlx_redisAddress "redis" \
+    # +set qlx_redisAddress "redis" \
     +set sv_hostname "${SERVER_NAME:-"NOME DO SERVER"}" \
     +set fs_homepath "/home/steam/.quakelive/$gameport" \
     +set zmq_rcon_enable "1" \
