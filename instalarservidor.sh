@@ -140,7 +140,7 @@ rm get-pip.py
 
 # Instala as dependências Python
 export PIP_BREAK_SYSTEM_PACKAGES=1
-sudo python3 -m pip install -r requirements.txt
+sudo python3 -m pip install --break-system-packages -r requirements.txt
 
 echo -e "${GREEN}Plugins minqlx instalados com sucesso.${NC}"
 timeout=3
