@@ -135,12 +135,12 @@ cd minqlx-plugins
 
 # Baixa e instala o pip
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python3 get-pip.py
+python3 get-pip.py --break-system-packages
 rm get-pip.py
 
 # Instala as dependências Python
-export PIP_BREAK_SYSTEM_PACKAGES=1
-sudo python3 -m pip install --break-system-packages -r requirements.txt
+#export PIP_BREAK_SYSTEM_PACKAGES=1
+python3 -m pip install --break-system-packages -r requirements.txt
 
 echo -e "${GREEN}Plugins minqlx instalados com sucesso.${NC}"
 timeout=3
