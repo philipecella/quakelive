@@ -6,7 +6,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
-timeout=3
+timeout=5
 
 apt-get update -y
 tput clear
@@ -62,6 +62,11 @@ apt-get update -y
 apt-get install lib32z1 lib32stdc++6 -y
 su - steam -c 'mkdir -p /home/steam/steamcmd && cd /home/steam/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz'
 echo -e "${GREEN}SteamCMD instalado${NC}"
+sleep $timeout
+
+# Executando o steamcmd pra atualizar antes de instalar o QL
+echo -e "${YELLOW}Atualizando SteamCMD...${NC}"
+su - steam -c '/home/steam/steamcmd/steamcmd.sh +quit'
 sleep $timeout
 
 # Instalação do Quake Live Server
