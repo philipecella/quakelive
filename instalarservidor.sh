@@ -112,6 +112,13 @@ apt-get -y install redis-server git build-essential
 echo -e "${GREEN}Redis, Git e build essentials instalados com sucesso.${NC}"
 sleep $timeout
 
+# Inicia e habilita o Redis
+echo -e "${YELLOW}Iniciando serviço Redis...${NC}"
+systemctl start redis-server
+systemctl enable redis-server
+echo -e "${GREEN}Redis iniciado com sucesso.${NC}"
+sleep $timeout
+
 unset DEBIAN_FRONTEND
 
 # Clone o repositório do minqlx
